@@ -1,0 +1,80 @@
+body{
+    background-color: #525252;
+    }
+
+.design {
+  margin: 0 auto;
+  background: #FFF3C0;
+  padding: 100px;
+  width: 1200px;
+  height:1600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.design form{
+	 align-content: center;
+	
+}
+.design ul{
+	list-style-type: none;
+	align-content: center;
+}
+
+.design li{
+	font-size:4rem; 
+	
+}
+
+.design li h1{
+	font-size:10rem; 
+	
+}
+
+.design li h4{
+	font-family:Algerian;
+	font-size:3rem; 
+	
+}
+
+.design li input[type="text"]
+{
+	height:90px;
+	width:900px;
+	font-size:40px;
+	
+}
+
+.design li input[type="password"]
+{
+	height:90px;
+	width:900px;
+	font-size:40px;
+	
+}
+
+.design li input[type="checkbox"]
+{
+	height:40px;
+	width:40px;
+	
+	
+}
+
+
+
+  .buttonf
+  {
+  background-color: #3633FF;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  border-radius:15px 15px 15px 15px;
+  float:center;
+  height:100px;
+  width:400px;
+  }

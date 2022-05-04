@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Create Account</title>
+  <link rel="stylesheet" type="text/css" href="invo.css">
+</head>
+<body>
+	
+<div class="design">
+
+<form action="login.php" align="center" method='POST'>
+<ul>
+  <li><h2>Create Account</h2></li>
+ <li><img src="ip_images/pblogo2.png"></li>
+ 
+ <li><h4>PUBLICSHODAI</h4></li><br><br>
+ <li>Name<br>
+ <input type="text" name="name" placeholder="Your Name" required></li> <br><br>
+ <li>Username
+ <input type="text" name="username" placeholder="email address" required></li> <br><br>
+ <li>Password
+ <input type="password" id="pass" name="pass" placeholder="password" required></li><br><br>
+ <li><input type="checkbox" onclick="myFunction()">Show Password</li><br><br><br><br>
+  
+  <input class="buttonf" type="submit" name="submit" value="Sign Up">
+  
+  </ul>
+
+ </form> 
+  </div>
+  
+  <script>
+  function myFunction() {
+  var x = document.getElementById("pass");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+   }
+  }
+  </script>
+  
+  
+  
+  
+</body>
+
+</html>

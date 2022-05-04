@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="homepra.css">
+<link rel="stylesheet" type="text/css" href="cart.css">
+</head>
+<body>
+<div class="top" height="220" width="120">
+<ul>
+  <li><a href="cartshow.php">CART</a></li>
+  <li><a href="about.html">ABOUT</a></li>
+  <li style="float:left"><a href="foodp.html">HOME</a></li>
+  
+  <li style="float:left; padding:45px 50px; color:white; border-right:0px">~~>Cart</li>
+  <li style="float:left; padding:45px 1000px; font-family:Algerian; border-right:0px; font-weight: bold">Relax & Order, We deliver</li>
+  
+  
+</ul>
+</div>
+
+<div class="left">
+<ul>
+  <li><img src="ip_images/pblogo2.png" height="650" width="650"></li>
+  <li><a href="foodp.html">Food</a></li>
+  <li><a href="toyp.html">Toys & Games</a></li>
+  <li><a href="beautyp.html">Beauty & Health</a></li>
+  <li><a href="cleaningp.html">Home & Cleaning</a></li>
+  <li><a href="appliancesp.html">Home Appliances</a></li>
+  
+</ul>
+</div>
+            
+<div class="design">
+
+<form action="cartq.php" align="center" method='POST'>
+<ul>
+  <li><h2>Products Quantity</h2></li>
+ <li><img src="ip_images/pblogo2.png"></li>
+ 
+ <li><h4>PUBLICSHODAI</h4></li><br><br>
+ 
+ 
+ </ul>
+  
+ 
+
+<table border="1">
+     <tr>
+	   <th><font size="6" face="Times" color="black">Product Name</font></th>
+	   <th><font size="6" face="Times" color="black">Quantity</font></th>
+	   <th><font size="6" face="Times" color="black">Price</font></th>
+	 </tr>
+	 
+<?php
+
+
+$hostname='localhost';
+$username='root';
+$userpass='';
+$dbname='ip_project21';
+$con= mysqli_connect($hostname,$username,$userpass) or die('Database connection error!');
+
+mysqli_select_db($con,$dbname);
+
+
+ 
+$sql4 = "select * from quantity_tab";	
+$result4 = mysqli_query($con,$sql4);
+
+	while($data4 = mysqli_fetch_assoc($result4))
+	{
+		
+		$tpid4= $data4['pid'];
+		$tquan4= $data4['p_quantity'];
+		
+		$quan4 = (int)$tquan4;
+		
+		$sql6 = "select pname,price from product where pid='$tpid4'";
+
+        $result6 = mysqli_query($con,$sql6);
+		
+		$data6 = mysqli_fetch_assoc($result6);
+	
+	    $cname= $data6['pname'];
+		$cprice= $data6['price'];
+		
+		$price=(int)$cprice;
+		
+		
+?>
+		<tr>
+	    <td style="padding:10px;"><font size="6" face="Times" color="black"><?php echo $cname; ?></font></td>
+		<td style="padding:10px;"><font size="6" face="Times" color="black"><?php echo $quan4; ?></font></td>
+		<td style="padding:10px;"><font size="6" face="Times" color="black"><?php echo $cprice; ?></font></td>
+	
+	 
+	   </tr>
+	 <?php
+		
+}
+	$con->close();
+	
+	?>
+	
+ 
+  </table>
+  <input class="buttonf" type="submit" name="submit" value="Add More"><br><br>
+  
+  <a href="buy.php"><bold>Buy</bold></a>
+  <a href="cartdel.php"><bold>Delete</bold></a>
+  
+  
+
+
+  </div>
+  
+ 	  
+			  
+</body>
+</html>
+
+

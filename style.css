@@ -1,0 +1,24 @@
+body{
+    background-color: #525252;
+    }
+
+.design {
+  margin: 0 auto;
+  background: #33ACFF; 
+  padding: 100px;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+  .buttonf
+  {
+  background-color: #3633FF;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
